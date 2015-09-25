@@ -42,7 +42,28 @@ class ParserStringDados(object):
         return arquivo
 
     def N002(self, bloco, arquivo):
-        print "Bloco N002"
+        if bloco[4:6] == '00':
+            arquivo.blocoN002_subtipo00.tipoReg = bloco[0:4]
+            arquivo.blocoN002_subtipo00.subtipo = bloco[4:6]
+            arquivo.blocoN002_subtipo00.banco = bloco[6:9]
+            arquivo.blocoN002_subtipo00.agencia = bloco[9:13]
+            arquivo.blocoN002_subtipo00.contaCorrente = bloco[13:28]
+            arquivo.blocoN002_subtipo00.chequeInicial = bloco[28:34]
+            arquivo.blocoN002_subtipo00.digitoChequeInicial = bloco[34:35]
+            arquivo.blocoN002_subtipo00.chequeFinal = bloco[35:41]
+            arquivo.blocoN002_subtipo00.digitoChequeInicial = bloco[41:42]
+            arquivo.blocoN002_subtipo00.cmc7Inicial = bloco[42:72]
+            arquivo.blocoN002_subtipo00.cmc7Final = bloco[72:102]
+            arquivo.blocoN002_subtipo00.filler = bloco[102:105]
+
+        if bloco[4:6] == '01':
+            arquivo.blocoN002_subtipo01 = bloco[0:4]
+            arquivo.blocoN002_subtipo01 = bloco[4:6]
+            arquivo.blocoN002_subtipo01 = bloco[6:21]
+            arquivo.blocoN002_subtipo01 = bloco[21:29]
+            arquivo.blocoN002_subtipo01 = bloco[29:115]
+
+        return arquivo
 
     def N003(self, bloco, arquivo):
         print "Bloco N003"
@@ -57,10 +78,20 @@ class ParserStringDados(object):
             arquivo.blocoN200_subtipo00.dataSituacaoDoc = bloco[86:94]
             arquivo.blocoN200_subtipo00.filler = bloco[94:115]
 
+        if bloco[4:6] == '01':
+            arquivo.blocoN002_subtipo01.tipoReg = bloco[0:4]
+            arquivo.blocoN200_subtipo01.subtipo = bloco[4:6]
+            arquivo.blocoN200_subtipo01.nomeMae = bloco[6:46]
+            arquivo.blocoN200_subtipo01.filler = bloco[46:115]
+
         return arquivo
 
     def N210(self, bloco, arquivo):
-        print "Bloco N210"
+        if bloco[4:6] == '99':
+            arquivo.blocoN210_subtipo99.tipoReg = bloco[0:4]
+            arquivo.blocoN210_subtipo99.subtipo = bloco[4:6]
+            arquivo.blocoN210_subtipo99.msgR210 = bloco[6:46]
+            arquivo.blocoN210_subtipo99.filler = bloco[46:115]
 
     def N220(self, bloco, arquivo):
         print "Bloco N220"
@@ -87,40 +118,40 @@ class ParserStringDados(object):
         print "Bloco não localizado!"
 
     def switch(self, bloco, blocoCodigo, arquivo):
-        if(blocoCodigo == 'B49C'):
+        if blocoCodigo == 'B49C':
             self.B49C(bloco, arquivo)
-        elif(blocoCodigo == 'P002'):
+        elif blocoCodigo == 'P002':
             arquivo = self.P002(bloco, arquivo)
-        elif(blocoCodigo == 'N001'):
+        elif blocoCodigo == 'N001':
             arquivo = self.N001(bloco, arquivo)
-        elif(blocoCodigo == 'N002'):
-            self.N002(bloco, arquivo)
-        elif(blocoCodigo == 'N003'):
+        elif blocoCodigo == 'N002':
+            arquivo = self.N002(bloco, arquivo)
+        elif blocoCodigo == 'N003':
             self.N003(bloco, arquivo)
-        elif(blocoCodigo == 'N200'):
-           arquivo = self.N200(bloco, arquivo)
-        elif(blocoCodigo == 'N210'):
-            self.N210(bloco, arquivo)
-        elif(blocoCodigo == 'N220'):
+        elif blocoCodigo == 'N200':
+            arquivo = self.N200(bloco, arquivo)
+        elif blocoCodigo == 'N210':
+            arquivo = self.N210(bloco, arquivo)
+        elif blocoCodigo == 'N220':
             self.N220(bloco, arquivo)
-        elif(blocoCodigo == 'N230'):
+        elif blocoCodigo == 'N230':
             self.N230(bloco, arquivo)
-        elif(blocoCodigo == 'N240'):
+        elif blocoCodigo == 'N240':
             self.N240(bloco, arquivo)
-        elif(blocoCodigo == 'N250'):
+        elif blocoCodigo == 'N250':
             self.N250(bloco, arquivo)
-        elif(blocoCodigo == 'N270'):
+        elif blocoCodigo == 'N270':
             self.N270(bloco, arquivo)
-        elif(blocoCodigo == 'N440'):
+        elif blocoCodigo == 'N440':
             self.N440(bloco, arquivo)
-        elif(blocoCodigo == 'T999'):
+        elif blocoCodigo == 'T999':
             self.T999(bloco, arquivo)
 
         return arquivo
 
     def parserStringDadosRetorno(self, stringDadosRetorno):
         vetorStringDados = re.findall("([B,P,N,T]\d{2}.*?)(?=[P,N,T]\d{3})", stringDadosRetorno)
-        #print vetorStringDados
+        # print vetorStringDados
 
         arquivoCrednet = self.montarObjetoCrednet(vetorStringDados)
 
