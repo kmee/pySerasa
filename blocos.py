@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class RegistrosB49C(object):
     protocolo = None
     codEstacaoChamadora = None
