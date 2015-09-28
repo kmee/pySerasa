@@ -6,7 +6,7 @@ class RegistrosB49C(object):
     numDocumentoConsultado = None
     tipoPessoaConsultado = None
     baseCons = None
-    modalidaede = None
+    modalidade = None
     vlrConsul = None
     centroCusto = None
     codificado = None
@@ -26,8 +26,11 @@ class RegistrosB49C(object):
     qtdCheque = None
     endTel = None
     qtdCho1 = None
+    scoCho1 = None
     tarCho1 = None
     naoCobrarBureau = None
+    autoPosit = None
+    bureauViaSiteTransacion = None
     querTel9Digtos = None
     ctaCorrent = None
     dgCtacorr = None
@@ -38,7 +41,7 @@ class RegistrosB49C(object):
     resposta = None
     periodoCompro = None
     periodoEndereco = None
-    bactest = None
+    backtest = None
     dtQuality = None
     prdOrigem = None
     trnOrigem = None
@@ -63,6 +66,7 @@ class RegistrosB49C(object):
     itemTsScor1 = None
     itemTsBp49 = None
     itemTsDados2 = None
+    tsDados2 = None
     fase1 = None
     fase2 = None
     dbTabela = None
