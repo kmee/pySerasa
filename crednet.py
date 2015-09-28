@@ -31,10 +31,11 @@ from blocos import RegistrosN440_subtipo01
 from blocos import RegistrosN440_subtipo02
 from blocos import RegistrosN440_subtipo03
 from blocos import RegistrosN440_subtipo99
-from blocos import RegistrosT999 
+from blocos import RegistrosT999
 
 
 class Crednet(object):
+
     blocoB49C = RegistrosB49C
     blocoP002 = RegistrosP002
     blocoN001 = RegistrosN001

@@ -5,7 +5,6 @@ from crednet import Crednet
 
 
 class ParserStringDados(object):
-
     def realizarBuscaSerasa(self, dados):
         request = requests.get(dados)
 
@@ -220,7 +219,7 @@ class ParserStringDados(object):
             arquivo.blocoN230_subtipo90.dataOcorrenciaRecente = bloco[17:23]
             arquivo.blocoN230_subtipo90.valorTotal = bloco[23:38]
             arquivo.blocoN230_subtipo90.filler = bloco[38:114]
-        
+
         if bloco[4:6] == '99':
             arquivo.blocoN230_subtipo99.tipoReg = bloco[0:4]
             arquivo.blocoN230_subtipo99.subtipo = bloco[4:6]
@@ -349,37 +348,55 @@ class ParserStringDados(object):
         if bloco[4:6] == '00':
             arquivo.blocoN440_subtipo00.tipoReg = bloco[0:4]
             arquivo.blocoN440_subtipo00.subtipo = bloco[4:6]
-            arquivo.blocoN440_subtipo00.dataEmissaoPrimeiroChequeVista = bloco[6:10]
-            arquivo.blocoN440_subtipo00.dataEmissaoUltimoChequeVista = bloco[10:14]
-            arquivo.blocoN440_subtipo00.totalChequesUltimos15DiasPrazo = bloco[14:17]
-            arquivo.blocoN440_subtipo00.totalChequesUltimos30DiasPrazo = bloco[17:19]
-            arquivo.blocoN440_subtipo00.totalChequesUltimos60DiasPrazo = bloco[19:21]
-            arquivo.blocoN440_subtipo00.totalChequesUltimos90DiasPrazo = bloco[21:23]
+            arquivo.blocoN440_subtipo00.dataEmissaoPrimeiroChequeVista =\
+                bloco[6:10]
+            arquivo.blocoN440_subtipo00.dataEmissaoUltimoChequeVista = \
+                bloco[10:14]
+            arquivo.blocoN440_subtipo00.totalChequesUltimos15DiasPrazo = \
+                bloco[14:17]
+            arquivo.blocoN440_subtipo00.totalChequesUltimos30DiasPrazo = \
+                bloco[17:19]
+            arquivo.blocoN440_subtipo00.totalChequesUltimos60DiasPrazo =\
+                bloco[19:21]
+            arquivo.blocoN440_subtipo00.totalChequesUltimos90DiasPrazo =\
+                bloco[21:23]
             arquivo.blocoN440_subtipo00.totalChequesPrazo = bloco[23:26]
             arquivo.blocoN440_subtipo00.filler = bloco[26:114]
 
         if bloco[4:6] == '01':
             arquivo.blocoN440_subtipo01.tipoReg = bloco[0:4]
             arquivo.blocoN440_subtipo01.subtipo = bloco[4:6]
-            arquivo.blocoN440_subtipo01.dataEmissaoPrimeiroChequeVista = bloco[6:10]
-            arquivo.blocoN440_subtipo01.dataEmissaoUltimoChequeVista = bloco[10:14]
-            arquivo.blocoN440_subtipo01.totalChequesUltimos15DiasPrazo = bloco[14:17]
-            arquivo.blocoN440_subtipo01.totalChequesUltimos30DiasPrazo = bloco[17:19]
-            arquivo.blocoN440_subtipo01.totalChequesUltimos60DiasPrazo = bloco[19:21]
-            arquivo.blocoN440_subtipo01.totalChequesUltimos90DiasPrazo = bloco[21:23]
+            arquivo.blocoN440_subtipo01.dataEmissaoPrimeiroChequeVista =\
+                bloco[6:10]
+            arquivo.blocoN440_subtipo01.dataEmissaoUltimoChequeVista =\
+                bloco[10:14]
+            arquivo.blocoN440_subtipo01.totalChequesUltimos15DiasPrazo =\
+                bloco[14:17]
+            arquivo.blocoN440_subtipo01.totalChequesUltimos30DiasPrazo =\
+                bloco[17:19]
+            arquivo.blocoN440_subtipo01.totalChequesUltimos60DiasPrazo =\
+                bloco[19:21]
+            arquivo.blocoN440_subtipo01.totalChequesUltimos90DiasPrazo =\
+                bloco[21:23]
             arquivo.blocoN440_subtipo01.totalChequesPrazo = bloco[23:26]
             arquivo.blocoN440_subtipo01.filler = bloco[26:114]
-            tipoReg = None
+            # tipoReg = None
 
         if bloco[4:6] == '02':
             arquivo.blocoN440_subtipo02.tipoReg = bloco[0:4]
             arquivo.blocoN440_subtipo02.subtipo = bloco[4:6]
-            arquivo.blocoN440_subtipo02.PrimeiroRecenteNomeEmpr = bloco[6:31]
-            arquivo.blocoN440_subtipo02.PrimeiroRecenteData = bloco[31:35]
-            arquivo.blocoN440_subtipo02.SegundoRecenteNomeEmpr = bloco[35:60]
-            arquivo.blocoN440_subtipo02.SegundoRecenteData = bloco[60:64]
-            arquivo.blocoN440_subtipo02.TericeiroRecenteNomeEmpr = bloco[64:89]
-            arquivo.blocoN440_subtipo02.TericeiroRecenteData = bloco[89:93]
+            arquivo.blocoN440_subtipo02.PrimeiroRecenteNomeEmpr =\
+                bloco[6:31]
+            arquivo.blocoN440_subtipo02.PrimeiroRecenteData =\
+                bloco[31:35]
+            arquivo.blocoN440_subtipo02.SegundoRecenteNomeEmpr =\
+                bloco[35:60]
+            arquivo.blocoN440_subtipo02.SegundoRecenteData =\
+                bloco[60:64]
+            arquivo.blocoN440_subtipo02.TericeiroRecenteNomeEmpr =\
+                bloco[64:89]
+            arquivo.blocoN440_subtipo02.TericeiroRecenteData =\
+                bloco[89:93]
             arquivo.blocoN440_subtipo02.filler = bloco[93:114]
 
         if bloco[4:6] == '03':
@@ -398,7 +415,7 @@ class ParserStringDados(object):
             arquivo.blocoN440_subtipo99.filler = bloco[46:114]
 
         return arquivo
-        
+
     def T999(self, bloco, arquivo):
         arquivo.blocoT999.tipoReg = bloco[0:4]
         arquivo.blocoT999.codigo = bloco[4:7]
@@ -444,9 +461,8 @@ class ParserStringDados(object):
 
     def parserStringDadosRetorno(self, stringDadosRetorno):
         stringDadosRetorno = stringDadosRetorno + 'T999'
-        vetorStringDados = re.findall("([B,P,N,T]\d{2}.*?)(?=[P,N,T]\d{3})", stringDadosRetorno)
-        # print vetorStringDados
-
+        vetorStringDados = re.findall(
+            "([B,P,N,T]\d{2}.*?)(?=[P,N,T]\d{3})", stringDadosRetorno)
         arquivoCrednet = self.montarObjetoCrednet(vetorStringDados)
 
         return arquivoCrednet
