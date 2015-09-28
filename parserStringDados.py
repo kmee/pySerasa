@@ -1,9 +1,15 @@
 # -*- coding: utf-8 -*-
 import re
+import requests
 from crednet import Crednet
 
 
 class ParserStringDados(object):
+
+    def realizarBuscaSerasa(self, dados):
+        request = requests.get(dados)
+
+        return request.text
 
     def B49C(self, bloco, arquivo):
         print "Bloco B49C"
@@ -81,6 +87,7 @@ class ParserStringDados(object):
         if bloco[4:6] == '00':
             arquivo.blocoN200_subtipo00.tipoReg = bloco[0:4]
             arquivo.blocoN200_subtipo00.subtipo = bloco[4:6]
+            print bloco[6:76]
             arquivo.blocoN200_subtipo00.nomeRazao = bloco[6:76]
             arquivo.blocoN200_subtipo00.dataNascFundacao = bloco[76:84]
             arquivo.blocoN200_subtipo00.situacaoDoc = bloco[84:86]
@@ -101,6 +108,8 @@ class ParserStringDados(object):
             arquivo.blocoN210_subtipo99.subtipo = bloco[4:6]
             arquivo.blocoN210_subtipo99.msgR210 = bloco[6:46]
             arquivo.blocoN210_subtipo99.filler = bloco[46:115]
+
+        return arquivo
 
     def N220(self, bloco, arquivo):
         arquivo.blocoN200_subtipo00.tipoReg = bloco[0:4]
@@ -128,13 +137,13 @@ class ParserStringDados(object):
             arquivo.blocoN230_subtipo00.filler = bloco[113:115]
 
         if bloco[4:6] == '90':
-            arquivo.blocoN230_subtipo00.tipoReg = bloco[0:4]
-            arquivo.blocoN230_subtipo00.subtipo = bloco[4:6]
-            arquivo.blocoN230_subtipo00.totalOcorrencias = bloco[6:11]
-            arquivo.blocoN230_subtipo00.dataOcorrenciaAntiga = bloco[11:17]
-            arquivo.blocoN230_subtipo00.dataOcorrenciaRecente = bloco[17:23]
-            arquivo.blocoN230_subtipo00.valorTotal = bloco[23:38]
-            arquivo.blocoN230_subtipo00.filler = bloco[38:114]
+            arquivo.blocoN230_subtipo90.tipoReg = bloco[0:4]
+            arquivo.blocoN230_subtipo90.subtipo = bloco[4:6]
+            arquivo.blocoN230_subtipo90.totalOcorrencias = bloco[6:11]
+            arquivo.blocoN230_subtipo90.dataOcorrenciaAntiga = bloco[11:17]
+            arquivo.blocoN230_subtipo90.dataOcorrenciaRecente = bloco[17:23]
+            arquivo.blocoN230_subtipo90.valorTotal = bloco[23:38]
+            arquivo.blocoN230_subtipo90.filler = bloco[38:114]
         
         if bloco[4:6] == '99':
             arquivo.blocoN230_subtipo99.tipoReg = bloco[0:4]
@@ -170,19 +179,18 @@ class ParserStringDados(object):
         if bloco[4:6] == '90':
             arquivo.blocoN240_subtipo90.tipoReg = bloco[0:4]
             arquivo.blocoN240_subtipo90.subtipo = bloco[4:6]
-            arquivo.blocoN240_subtipo90.totalOcorrencias = blocos[6:11]
-            arquivo.blocoN240_subtipo90.dataOcorrenciaAntiga = blocos[11:17]
-            arquivo.blocoN240_subtipo90.dataOcorrenciaRecente = blocos[17:23]
-            arquivo.blocoN240_subtipo90.valorTotal = blocos[23:38]
-            arquivo.blocoN240_subtipo90.tipoAnotacao = blocos[38:39]
-            arquivo.blocoN240_subtipo90.filler = blocos[39:114]
+            arquivo.blocoN240_subtipo90.totalOcorrencias = bloco[6:11]
+            arquivo.blocoN240_subtipo90.dataOcorrenciaAntiga = bloco[11:17]
+            arquivo.blocoN240_subtipo90.dataOcorrenciaRecente = bloco[17:23]
+            arquivo.blocoN240_subtipo90.valorTotal = bloco[23:38]
+            arquivo.blocoN240_subtipo90.tipoAnotacao = bloco[38:39]
+            arquivo.blocoN240_subtipo90.filler = bloco[39:114]
 
         if bloco[4:6] == '99':
             arquivo.blocoN240_subtipo99.tipoReg = bloco[0:4]
             arquivo.blocoN240_subtipo99.subtipo = bloco[4:6]
             arquivo.blocoN240_subtipo99.msgR240 = bloco[6:46]
             arquivo.blocoN240_subtipo99.filler = bloco[46:114]
-
 
         return arquivo
 
@@ -320,6 +328,8 @@ class ParserStringDados(object):
         arquivo.blocoT999.codigo = bloco[4:7]
         arquivo.blocoT999.mensagem = bloco[7:77]
         arquivo.blocoT999.filler = bloco[77:114]
+
+        return arquivo
 
     def case_default(self):
         print "Bloco não localizado!"

@@ -33,14 +33,19 @@ stringDados = 'B49C      062173620000180JC     FI0001000000000000000N99SFIMAN   
               '                                                                 T999000PROCESSO ENCERRADO' \
               ' NORMALMENTE                                                                             '
 
+dados = 'https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=4426006940302010        B49C      062173620000180JC     FI0001000000000000000N99SINIAN                              D             N                                            08053031000201                                                                                                                                                                                                                                           P002RE02                                                                                                           N00100PPX21P 0                                                                                                     T999'
 parser = ParserStringDados()
+
+stringDados = parser.realizarBuscaSerasa(dados)
 
 arquivo = parser.parserStringDadosRetorno(stringDados)
 
 print(arquivo.blocoN200_subtipo00().get_nome_bloco()+'\n')
-print('Tipo do registro: ' + arquivo.blocoN200_subtipo00.tipoReg)
-print('Subtipo: ' + arquivo.blocoN200_subtipo00.subtipo)
-print('Nome razão: ' + arquivo.blocoN200_subtipo00.nomeRazao)
-print('Data de nascimento ou fundação: ' + arquivo.blocoN200_subtipo00.dataNascFundacao)
-print('Situação do documento: ' + arquivo.blocoN200_subtipo00.situacaoDoc)
-print('Data da situação do documento: ' + arquivo.blocoN200_subtipo00.dataSituacaoDoc)
+print(u'Tipo do registro: ' + arquivo.blocoN200_subtipo00.tipoReg)
+print(u'Subtipo: ' + arquivo.blocoN200_subtipo00.subtipo)
+print(u'Nome razão: ' + arquivo.blocoN200_subtipo00.nomeRazao)
+print(u'Data de nascimento ou fundação: ' + arquivo.blocoN200_subtipo00.dataNascFundacao)
+print(u'Situação do documento: ' + arquivo.blocoN200_subtipo00.situacaoDoc)
+print(u'Data da situação do documento: ' + arquivo.blocoN200_subtipo00.dataSituacaoDoc)
+
+print(u'N230: ' + arquivo.blocoN230_subtipo99.msgR230)
