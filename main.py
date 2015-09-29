@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 import re
 from parserStringDados import ParserStringDados
+from crednet import Crednet
+from blocos import *
 
+documentoConsultado = '062173620000180'
 
-dados = 'https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=4426006940302010        B49C      062173620000180JC' \
+tipoDeBusca = 'J'
+
+dados = 'https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=4426006940302010        B49C      ' + documentoConsultado + tipoDeBusca + 'C' \
         '     FI0001000000000000000N99SINIAN                              D             N                             ' \
         '               08053031000201                                                                                ' \
         '                                                                                                             ' \
@@ -16,18 +21,16 @@ parser = ParserStringDados()
 # Variavel que recebe o a string de retorno do Serasa
 stringDados = parser.realizarBuscaSerasa(dados)
 
+arquivo = Crednet()
 # Gera o arquivo parseado separando os blocos da string de retorno
 # segundo o manual do Crednet do Serasa versão:06 de Janeiro/2014
-arquivo = parser.parserStringDadosRetorno(stringDados)
+arquivo = parser.parserStringDadosRetorno(stringDados, arquivo)
 
-print(arquivo.blocoN200_subtipo00().get_nome_bloco()+'\n')
-print(u'Tipo do registro: ' + arquivo.blocoN200_subtipo00.tipoReg)
-print(u'Subtipo: ' + arquivo.blocoN200_subtipo00.subtipo)
-print(u'Nome razão: ' + arquivo.blocoN200_subtipo00.nomeRazao)
-print(u'Data de nascimento ou fundação: ' + arquivo.blocoN200_subtipo00.dataNascFundacao)
-print(u'Situação do documento: ' + arquivo.blocoN200_subtipo00.situacaoDoc)
-print(u'Data da situação do documento: ' + arquivo.blocoN200_subtipo00.dataSituacaoDoc)
 
-print(u'N230: ' + arquivo.blocoN230_subtipo99.msgR230)
+for bloco in arquivo._blocos:
+        for campo in bloco._campos:
+                print (campo._nome + " : " + campo._valor)
 
-print (u'B49C: ' + arquivo.blocoB49C.tipoPessoaConsultado)
+        print "\n"
+
+print arquivo._blocos[0]._campos[0]._nome
