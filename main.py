@@ -1,20 +1,26 @@
 # -*- coding: utf-8 -*-
-import re
+
 from parserStringDados import ParserStringDados
 from crednet import Crednet
-from blocos import *
+
+logon = '44260069'
+
+senha = '40302010'
 
 documentoConsultado = '062173620000180'
 
 tipoDeBusca = 'J'
 
-dados = 'https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=4426006940302010        B49C      ' + documentoConsultado + tipoDeBusca + 'C' \
+documentoConsultor = '08053031000201'
+
+dados = 'https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=' + logon + senha + '        B49C      ' + documentoConsultado + tipoDeBusca + 'C' \
         '     FI0001000000000000000N99SINIAN                              D             N                             ' \
-        '               08053031000201                                                                                ' \
+        '               ' + documentoConsultor + '                                                                                ' \
         '                                                                                                             ' \
         '                                              P002RE02                                                       ' \
         '                                                    N00100PPX21P 0                                           ' \
         '                                                          T999'
+
 # Objeto que gerencia todas as funções de parsing
 parser = ParserStringDados()
 
