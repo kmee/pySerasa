@@ -3,9 +3,9 @@
 from parserStringDados import ParserStringDados
 from crednet import Crednet
 
-logon = '44260069'
+logon = '32629955'
 
-senha = '40302010'
+senha = '10203040'
 
 documentoConsultado = '062173620000180'
 
@@ -32,11 +32,14 @@ arquivo = Crednet()
 # segundo o manual do Crednet do Serasa versão:06 de Janeiro/2014
 arquivo = parser.parserStringDadosRetorno(stringDados, arquivo)
 
+#
+# for bloco in arquivo._blocos:
+#         for campo in bloco._campos:
+#                 print (campo._nome + " : " + campo._valor)
+#
+#         print "\n"
 
-for bloco in arquivo._blocos:
-        for campo in bloco._campos:
-                print (campo._nome + " : " + campo._valor)
-
-        print "\n"
-
-print arquivo._blocos[0]._campos[0]._nome
+print arquivo.B49C.Protocolo
+print arquivo.P002.tipoReg
+# print arquivo.N001.transacaoConsulta
+print arquivo.T999.tipoReg + " : " + arquivo.T999.mensagem

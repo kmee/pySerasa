@@ -1,155 +1,47 @@
 # -*- coding: utf-8 -*-
 from campos import Campo
+from registrosDados import RegistrosB49C
+from registrosDados import RegistrosP002
+from registrosDados import RegistrosN001
+from registrosDados import RegistrosN002_subtipo00
+from registrosDados import RegistrosT999
+from registro import Registro
 
 
-class RegistrosB49C(Campo):
-    _campos = []
+class blocoB49C(Registro):
 
-    def __init__(self, bloco):
-        self._campos.append(Campo(1, 0, 'Protocolo', bloco, 4))
-        self._campos.append(Campo(2, 4, 'codEstacaoChamadora', bloco, 6))
-#     protocolo = None
-#     codEstacaoChamadora = None
-#     numDocumentoConsultado = None
-#     tipoPessoaConsultado = None
-#     baseCons = None
-#     modalidade = None
-#     vlrConsul = None
-#     centroCusto = None
-#     codificado = None
-#     qtdRegistros = None
-#     conversa = None
-#     funcao = None
-#     tipoConsulta = None
-#     atualiza = None
-#     ident_term = None
-#     rescli = None
-#     delts = None
-#     cobra = None
-#     passa = None
-#     consCollec = None
-#     localizador = None
-#     docCredor = None
-#     qtdCheque = None
-#     endTel = None
-#     qtdCho1 = None
-#     scoCho1 = None
-#     tarCho1 = None
-#     naoCobrarBureau = None
-#     autoPosit = None
-#     bureauViaSiteTransacion = None
-#     querTel9Digtos = None
-#     ctaCorrent = None
-#     dgCtacorr = None
-#     agencia = None
-#     alerta = None
-#     logon = None
-#     viaInternet = None
-#     resposta = None
-#     periodoCompro = None
-#     periodoEndereco = None
-#     backtest = None
-#     dtQuality = None
-#     prdOrigem = None
-#     trnOrigem = None
-#     consultante = None
-#     tpOr = None
-#     cnpjSoftware = None
-#     filler = None
-#     qtdCompr = None
-#     negativos = None
-#     cheque = None
-#     dataConsul = None
-#     horaConsult = None
-#     totalReg = None
-#     qtdReg1 = None
-#     codTab = None
-#     itemTsDados = None
-#     tsDados = None
-#     tsScore1 = None
-#     tsBp49 = None
-#     tsAutor = None
-#     itemTsAutor = None
-#     itemTsScor1 = None
-#     itemTsBp49 = None
-#     itemTsDados2 = None
-#     tsDados2 = None
-#     fase1 = None
-#     fase2 = None
-#     dbTabela = None
-#     codAut = None
-#     operid = None
-#     reciCompr = None
-#     reciPagto = None
-#     filler2 = None
-#     acessRechq = None
-#     temOcorrenciaRecheque = None
-#     reservado = None
-#
-#     def get_nome_bloco(self):
-#         return "Bloco Protocolo"
-#
-#
-class RegistrosP002(Campo):
-    _campos = []
+    def __init__(self, nome, bloco):
+        self.nome = nome
+        self.campos = RegistrosB49C(bloco)
 
-    def __init__(self, bloco):
-        self._campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
-        self._campos.append(Campo(2, 4, 'subtipo', bloco, 2))
-    # tipoReg = None
-    # cod1 = None
-    # chave1 = None
-    # cod2 = None
-    # chave2 = None
-    # cod3 = None
-    # chave3 = None
-    # cod4 = None
-    # chave4 = None
-    # filler = None
+    def get_nome_bloco(self):
+        return "Bloco Protocolo"
+
+
+class blocoP002(Registro):
+
+    def __init__(self, nome, bloco):
+        self.nome = nome
+        self.campos = RegistrosP002(bloco)
 
     def get_nome_bloco(self):
         return "Bloco P002"
-#
-#
-# class RegistrosN001(object):
-#     tipoReg = None
-#     subtipo = None
-#     tipoConsulta = None
-#     transacaoConsulta = None
-#     solGrandeVarejo = None
-#     idCheque = None
-#     agrupa = None
-#     consultaSintetica = None
-#     reservado = None
-#     anotacoesResumo = None
-#     chaveConsulta = None
-#     fantasia = None
-#     statusBanco = None
-#     filler = None
-#     trataTel = None
-#
-#     def get_nome_bloco(self):
-#         return "Bloco N001"
-#
-#
-# class RegistrosN002_subtipo00(object):
-#     tipoReg = None
-#     subtipo = None
-#     banco = None
-#     agencia = None
-#     contaCorrente = None
-#     chequeInicial = None
-#     digitoChequeInicial = None
-#     chequeFinal = None
-#     digitoChequeFinal = None
-#     cmc7Inicial = None
-#     cmc7Final = None
-#     filler = None
-#
-#     def get_nome_bloco(self):
-#         return "Bloco N002 subtipo 00"
-#
-#
+
+
+class blocoN001(Registro):
+
+    def __init__(self, nome, bloco):
+        self.nome = nome
+        self.campos = RegistrosN001(bloco)
+
+
+class blocoN002_subtipo00(object):
+
+    def __init__(self, nome, bloco):
+        self.nome = nome
+        self.campos = RegistrosN002_subtipo00(bloco)
+
+
 # class RegistrosN002_subtipo01(object):
 #     tipoReg = None
 #     subtipo = None
@@ -507,13 +399,13 @@ class RegistrosP002(Campo):
 #
 #     def get_nome_bloco(self):
 #         return "Bloco N440 subtipo 99"
-#
-#
-# class RegistrosT999(object):
-#     tipoReg = None
-#     codigo = None
-#     mensagem = None
-#     filler = None
-#
-#     def get_nome_bloco(self):
-#         return "Bloco T999"
+
+
+class blocoT999(Registro):
+
+    def __init__(self, nome, bloco):
+        self.nome = nome
+        self.campos = RegistrosT999(bloco)
+
+    def get_nome_bloco(self):
+        return "Bloco T999"

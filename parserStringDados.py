@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
 import requests
-from crednet import Crednet
 from blocos import *
 
 
@@ -13,119 +12,22 @@ class ParserStringDados(object):
         return request.text
 
     def B49C(self, bloco, arquivo):
-        blocoB49C = RegistrosB49C(bloco)
-        # arquivo.blocoB49C.protocolo = bloco[0:4]
-        # arquivo.blocoB49C.codEstacaoChamadora = bloco[4:10]
-        # arquivo.blocoB49C.numDocumentoConsultado = bloco[10:25]
-        # arquivo.blocoB49C.tipoPessoaConsultado = bloco[25:26]
-        # arquivo.blocoB49C.baseCons = bloco[26:32]
-        # arquivo.blocoB49C.modalidade = bloco[32:34]
-        # arquivo.blocoB49C.vlrConsul = bloco[34:41]
-        # arquivo.blocoB49C.centroCusto = bloco[41:53]
-        # arquivo.blocoB49C.qtdRegistros = bloco[53:56]
-        # arquivo.blocoB49C.conversa = bloco[56:57]
-        # arquivo.blocoB49C.funcao = bloco[57:60]
-        # arquivo.blocoB49C.tipoConsulta = bloco[60:61]
-        # arquivo.blocoB49C.atualiza = bloco[61:62]
-        # arquivo.blocoB49C.ident_term = bloco[62:80]
-        # arquivo.blocoB49C.rescli = bloco[80:90]
-        # arquivo.blocoB49C.delts = bloco[90:91]
-        # arquivo.blocoB49C.cobra = bloco[91:92]
-        # arquivo.blocoB49C.passa = bloco[92:93]
-        # arquivo.blocoB49C.consCollec = bloco[93:94]
-        # arquivo.blocoB49C.localizador = bloco[94:95]
-        # arquivo.blocoB49C.docCredor = bloco[95:104]
-        # arquivo.blocoB49C.qtdCheque = bloco[104:106]
-        # arquivo.blocoB49C.endTel = bloco[106:107]
-        # arquivo.blocoB49C.qtdCho1 = bloco[107:109]
-        # arquivo.blocoB49C.scoCho1 = bloco[109:110]
-        # arquivo.blocoB49C.tarCho1 = bloco[110:111]
-        # arquivo.blocoB49C.naoCobrarBureau = bloco[111:112]
-        # arquivo.blocoB49C.autoPosit = bloco[112:113]
-        # arquivo.blocoB49C.bureauViaSiteTransacion = bloco[113:114]
-        # arquivo.blocoB49C.querTel9Digtos = bloco[114:115]
-        # arquivo.blocoB49C.ctaCorrent = bloco[115:125]
-        # arquivo.blocoB49C.dgCtacorr = bloco[125:126]
-        # arquivo.blocoB49C.agencia = bloco[126:130]
-        # arquivo.blocoB49C.alerta = bloco[130:131]
-        # arquivo.blocoB49C.logon = bloco[131:139]
-        # arquivo.blocoB49C.viaInternet = bloco[139:140]
-        # arquivo.blocoB49C.resposta = bloco[140:141]
-        # arquivo.blocoB49C.periodoCompro = bloco[141:142]
-        # arquivo.blocoB49C.periodoEndereco = bloco[142:143]
-        # arquivo.blocoB49C.backtest = bloco[143:144]
-        # arquivo.blocoB49C.dtQuality = bloco[144:145]
-        # arquivo.blocoB49C.prdOrigem = bloco[145:147]
-        # arquivo.blocoB49C.trnOrigem = bloco[147:151]
-        # arquivo.blocoB49C.consultante = bloco[151:166]
-        # arquivo.blocoB49C.tpOr = bloco[166:167]
-        # arquivo.blocoB49C.cnpjSoftware = bloco[167:176]
-        # arquivo.blocoB49C.filler = bloco[176:191]
-        # arquivo.blocoB49C.qtdCompr = bloco[191:193]
-        # arquivo.blocoB49C.negativos = bloco[193:194]
-        # arquivo.blocoB49C.cheque = bloco[194:195]
-        # arquivo.blocoB49C.dataConsul = bloco[195:203]
-        # arquivo.blocoB49C.horaConsult = bloco[203:209]
-        # arquivo.blocoB49C.totalReg = bloco[209:213]
-        # arquivo.blocoB49C.qtdReg1 = bloco[213:217]
-        # arquivo.blocoB49C.codTab = bloco[217:221]
-        # arquivo.blocoB49C.itemTsDados = bloco[221:225]
-        # arquivo.blocoB49C.tsDados = bloco[225:241]
-        # arquivo.blocoB49C.tsScore1 = bloco[241:257]
-        # arquivo.blocoB49C.tsBp49 = bloco[257:273]
-        # arquivo.blocoB49C.tsAutor = bloco[273:289]
-        # arquivo.blocoB49C.itemTsAutor = bloco[289:293]
-        # arquivo.blocoB49C.itemTsScor1 = bloco[293:297]
-        # arquivo.blocoB49C.itemTsBp49 = bloco[297:301]
-        # arquivo.blocoB49C.itemTsDados2 = bloco[301:305]
-        # arquivo.blocoB49C.tsDados2 = bloco[305:321]
-        # arquivo.blocoB49C.fase1 = bloco[321:322]
-        # arquivo.blocoB49C.fase2 = bloco[322:323]
-        # arquivo.blocoB49C.dbTabela = bloco[323:353]
-        # arquivo.blocoB49C.codAut = bloco[353:354]
-        # arquivo.blocoB49C.operid = bloco[354:357]
-        # arquivo.blocoB49C.reciCompr = bloco[357:358]
-        # arquivo.blocoB49C.reciPagto = bloco[358:359]
-        # arquivo.blocoB49C.filler = bloco[359:397]
-        # arquivo.blocoB49C.acessRechq = bloco[397:398]
-        # arquivo.blocoB49C.temOcorrenciaRecheque = bloco[398:399]
-        # arquivo.blocoB49C.reservado = bloco[399:400]
+        nome = "B49C"
+        blocoMontado = blocoB49C(nome, bloco)
 
-        return arquivo._blocos.append(blocoB49C)
+        return arquivo.blocos.append(blocoMontado)
 
     def P002(self, bloco, arquivo):
-        blocoP002 = RegistrosP002(bloco)
-        # arquivo.blocoP002.tipoReg = bloco[0:4]
-        # arquivo.blocoP002.cod1 = bloco[4:8]
-        # arquivo.blocoP002.chave1 = bloco[8:29]
-        # arquivo.blocoP002.cod2 = bloco[29:33]
-        # arquivo.blocoP002.chave2 = bloco[33:54]
-        # arquivo.blocoP002.cod3 = bloco[54:58]
-        # arquivo.blocoP002.chave3 = bloco[58:79]
-        # arquivo.blocoP002.cod4 = bloco[79:83]
-        # arquivo.blocoP002.chave4 = bloco[83:104]
-        # arquivo.blocoP002.filler = bloco[104:115]
+        nome = "P002"
+        blocoMontado = blocoP002(nome, bloco)
 
-        return arquivo._blocos.append(blocoP002)
+        return arquivo.blocos.append(blocoMontado)
 
     def N001(self, bloco, arquivo):
-        arquivo.blocoN001.tipoReg = bloco[0:4]
-        arquivo.blocoN001.subtipo = bloco[4:6]
-        arquivo.blocoN001.tipoConsulta = bloco[6:8]
-        arquivo.blocoN001.transacaoConsulta = bloco[8:12]
-        arquivo.blocoN001.solGrandeVarejo = bloco[12:13]
-        arquivo.blocoN001.idCheque = bloco[13:14]
-        arquivo.blocoN001.agrupa = bloco[14:15]
-        arquivo.blocoN001.consultaSintetica = bloco[15:16]
-        arquivo.blocoN001.reservado = bloco[16:17]
-        arquivo.blocoN001.anotacoesResumo = bloco[17:18]
-        arquivo.blocoN001.chaveConsulta = bloco[18:24]
-        arquivo.blocoN001.fantasia = bloco[24:36]
-        arquivo.blocoN001.statusBanco = bloco[36:37]
-        arquivo.blocoN001.filler = bloco[37:50]
-        arquivo.blocoN001.trataTel = bloco[50:51]
+        nome = "N001"
+        blocoMontado = blocoN001(nome, bloco)
 
-        return arquivo
+        return arquivo.blocos.append(blocoMontado)
 
     def N002(self, bloco, arquivo):
         if bloco[4:6] == '00':
@@ -403,12 +305,14 @@ class ParserStringDados(object):
         return arquivo
         
     def T999(self, bloco, arquivo):
-        arquivo.blocoT999.tipoReg = bloco[0:4]
-        arquivo.blocoT999.codigo = bloco[4:7]
-        arquivo.blocoT999.mensagem = bloco[7:77]
-        arquivo.blocoT999.filler = bloco[77:114]
+        nome = "T999"
+        blocoMontado = blocoT999(nome, bloco)
+        # arquivo.blocoT999.tipoReg = bloco[0:4]
+        # arquivo.blocoT999.codigo = bloco[4:7]
+        # arquivo.blocoT999.mensagem = bloco[7:77]
+        # arquivo.blocoT999.filler = bloco[77:114]
 
-        return arquivo
+        return arquivo.blocos.append(blocoMontado)
 
     def case_default(self):
         print "Bloco não localizado!"
@@ -419,7 +323,7 @@ class ParserStringDados(object):
         elif blocoCodigo == 'P002':
             self.P002(bloco, arquivo)
         elif blocoCodigo == 'N001':
-            arquivo = self.N001(bloco, arquivo)
+            self.N001(bloco, arquivo)
         elif blocoCodigo == 'N002':
             arquivo = self.N002(bloco, arquivo)
         elif blocoCodigo == 'N003':
@@ -441,14 +345,13 @@ class ParserStringDados(object):
         elif blocoCodigo == 'N440':
             arquivo = self.N440(bloco, arquivo)
         elif blocoCodigo == 'T999':
-            arquivo = self.T999(bloco, arquivo)
+            self.T999(bloco, arquivo)
 
         return arquivo
 
     def parserStringDadosRetorno(self, stringDadosRetorno, arquivo):
-        stringDadosRetorno = stringDadosRetorno + 'T999'
-        vetorStringDados = re.findall("([B,P,N,T]\d{2}.*?)(?=[P,N,T]\d{3})", stringDadosRetorno)
-        # print vetorStringDados
+        stringDadosRetorno = stringDadosRetorno[0:len(stringDadosRetorno)-2] + 'T999'
+        vetorStringDados = re.findall("([B,P,N,T]\d{2}.*?)(?=[B,P,N,T]\d{3})", stringDadosRetorno)
 
         arquivo = self.montarObjetoCrednet(vetorStringDados, arquivo)
 
@@ -456,11 +359,9 @@ class ParserStringDados(object):
 
     def montarObjetoCrednet(self, vetorStringDados, arquivo):
 
-        arquivo = self.switch(vetorStringDados[0], vetorStringDados[0][0:4], arquivo)
-        arquivo = self.switch(vetorStringDados[1], vetorStringDados[1][0:4], arquivo)
-
-        # for bloco in vetorStringDados:
-        #     blocoCodigo = bloco[0:4]
-        #     arquivo = self.switch(bloco, blocoCodigo, arquivo)
+        for bloco in vetorStringDados:
+            blocoCodigo = bloco[0:4]
+            arquivo = self.switch(bloco, blocoCodigo, arquivo)
 
         return arquivo
+    
