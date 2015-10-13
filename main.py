@@ -7,9 +7,9 @@ logon = '32629955'
 
 senha = '10203040'
 
-documentoConsultado = '062173620000180'
+documentoConsultado = '000000667541195'
 
-tipoPessoaBusca = 'J'
+tipoPessoaBusca = 'F'
 
 documentoConsultor = '08053031000201'
 
@@ -27,8 +27,9 @@ arquivo = Crednet()
 # segundo o manual do Crednet do Serasa versão:06 de Janeiro/2014
 arquivo = parser.parserStringDadosRetorno(stringDados, arquivo)
 
-print arquivo.B49C.Protocolo
-print arquivo.B49C.numDocumentoConsultado
-print arquivo.B49C.tipoPessoaConsultado
-print arquivo.N240_00.valor
-print arquivo.N440_99.msgR440
+
+arquivo.pendenciasInternas
+arquivo.pendenciasFinanceiras
+arquivo.protestosEstados
+arquivo.chequesSemFundos
+# print arquivo.B49C.protocolo

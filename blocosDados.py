@@ -34,6 +34,34 @@ from registrosDados import RegistrosT999
 from bloco import Bloco
 
 
+class pendenciasInternas(Bloco):
+    blocos = []
+
+    def __init__(self):
+        self.nome = "pendenciasInternas"
+
+
+class pendenciasFinanceiras(Bloco):
+    blocos = []
+
+    def __init__(self):
+        self.nome = "pendenciasFinanceiras"
+
+
+class protestosEstados(Bloco):
+    blocos = []
+
+    def __init__(self):
+        self.nome = "protestosEstados"
+
+
+class chequesSemFundos(Bloco):
+    blocos = []
+
+    def __init__(self):
+        self.nome = "chequesSemFundos"
+
+
 class blocoB49C(Bloco):
 
     def __init__(self, nome, bloco):
