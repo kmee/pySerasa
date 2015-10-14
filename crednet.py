@@ -22,7 +22,7 @@ class Crednet(object):
             print BlocoInexistenteError().exibirErro(name)
         else:
             if bloco.nome == 'pendenciasInternas':
-                print "Pendencias Internas\n"
+                print bloco.nome_bloco+"\n"
                 for registro in bloco.blocos:
                     for campos in registro.campos.campos:
                         print campos._nome,
@@ -31,7 +31,7 @@ class Crednet(object):
 
                     print " "
             if bloco.nome == 'pendenciasFinanceiras':
-                print "Pendencias Financeiras\n"
+                print bloco.nome_bloco+"\n"
                 for registro in bloco.blocos:
                     for campos in registro.campos.campos:
                         print campos._nome,
@@ -40,7 +40,7 @@ class Crednet(object):
 
                     print " "
             if bloco.nome == 'protestosEstados':
-                print "Protestos do Estado\n"
+                print bloco.nome_bloco+"\n"
                 for registro in bloco.blocos:
                     for campos in registro.campos.campos:
                         print campos._nome,
@@ -49,7 +49,7 @@ class Crednet(object):
 
                     print " "
             if bloco.nome == 'chequesSemFundos':
-                print "Cheques Sem Fundos\n"
+                print bloco.nome_bloco+"\n"
                 for registro in bloco.blocos:
                     for campos in registro.campos.campos:
                         print campos._nome,
@@ -63,8 +63,56 @@ class Crednet(object):
 
     def getString(self):
         for bloco in self.blocos:
-            print "Bloco :" + bloco.nome
-            for campo in bloco.campos.campos:
-                print campo._nome + " : " + campo._valor
+            if bloco.nome == 'pendenciasInternas':
+                print "Pendencias Internas\n"
+                for registro in bloco.blocos:
+                    for campos in registro.campos.campos:
+                        print campos._nome,
+                        print ": ",
+                        print campos._valor
 
-            print ""
+                    print " "
+            elif bloco.nome == 'pendenciasFinanceiras':
+                print "Pendencias Financeiras\n"
+                for registro in bloco.blocos:
+                    for campos in registro.campos.campos:
+                        print campos._nome,
+                        print ": ",
+                        print campos._valor
+
+                    print " "
+            elif bloco.nome == 'protestosEstados':
+                print "Protestos dos Estados\n"
+                for registro in bloco.blocos:
+                    for campos in registro.campos.campos:
+                        print campos._nome,
+                        print ": ",
+                        print campos._valor
+
+                    print " "
+            elif bloco.nome == 'chequesSemFundos':
+                print "Cheques sem Fundos\n"
+                for registro in bloco.blocos:
+                    for campos in registro.campos.campos:
+                        print campos._nome,
+                        print ": ",
+                        print campos._valor
+
+                    print " "
+            else:
+                print bloco.nome_bloco + "\n"
+                for campo in bloco.campos.campos:
+                    print campo._nome,
+                    print " : ",
+                    print campo._valor
+
+            print "\n"
+
+
+    def getBlocoDeRegistros(self, nome):
+
+        for bloco in self.blocos:
+            if bloco.nome == nome:
+                return bloco
+
+        return None

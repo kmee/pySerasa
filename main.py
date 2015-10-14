@@ -28,8 +28,14 @@ arquivo = Crednet()
 arquivo = parser.parserStringDadosRetorno(stringDados, arquivo)
 
 
-arquivo.pendenciasInternas
-arquivo.pendenciasFinanceiras
-arquivo.protestosEstados
-arquivo.chequesSemFundos
+# arquivo.pendenciasInternas
+# arquivo.pendenciasFinanceiras
+# arquivo.protestosEstados
+# arquivo.chequesSemFundos
 # print arquivo.B49C.protocolo
+
+#arquivo.getString()
+
+teste = arquivo.getBlocoDeRegistros('B49C')
+
+print teste

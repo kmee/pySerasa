@@ -165,7 +165,7 @@ class RegistrosN003(object):
         self.campos.append(Campo(4, 9, 'telefone', bloco, 8))
         self.campos.append(Campo(5, 18, 'cep', bloco, 9))
         self.campos.append(Campo(6, 27, 'uf', bloco, 4))
-        self.campos.append(Campo(7, 29, 'featScor', bloco, 4))
+        self.campos.append(Campo(7, 29, 'featScor', bloco, 80))
         self.campos.append(Campo(8, 109, 'filler', bloco, 6))
 
 
