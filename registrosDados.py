@@ -814,7 +814,7 @@ class RegistrosN440_subtipo99(object):
         self.campos.append(Campo(4, 46, 'filler', bloco, 69))
 
 
-class RegistrosN460_subtipo01(object):
+class RegistrosN460_subtipo00(object):
 
     def __init__(self, bloco):
         self.campos = []
@@ -1328,6 +1328,98 @@ class RegistrosN670_subtipo99(object):
         self.campos.append(Campo(4, 86, 'filler', bloco, 29))
 
 
+class RegistrosN680_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'faixa', bloco, 2))
+        self.campos.append(Campo(4, 8, 'mensagem', bloco, 72))
+        self.campos.append(Campo(5, 80, 'filler', bloco, 35))
+
+
+class RegistrosN680_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 80))
+        self.campos.append(Campo(4, 86, 'filler', bloco, 29))
+
+
+class RegistrosN690_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'nome', bloco, 40))
+        self.campos.append(Campo(4, 46, 'cnpj', bloco, 14))
+        self.campos.append(Campo(5, 60, 'participacao', bloco, 5))
+        self.campos.append(Campo(6, 65, 'uf', bloco, 2))
+        self.campos.append(Campo(7, 67, 'dataInicio', bloco, 8))
+        self.campos.append(Campo(8, 75, 'dataAtualizacao', bloco, 8))
+        self.campos.append(Campo(9, 83, 'filler', bloco, 32))
+
+
+class RegistrosN690_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 80))
+        self.campos.append(Campo(4, 87, 'filler', bloco, 29))
+
+
+class RegistrosN700_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'tipoPessoa', bloco, 1))
+        self.campos.append(Campo(4, 7, 'docSocioAcionista', bloco, 14))
+        self.campos.append(Campo(5, 21, 'nome', bloco, 60))
+        self.campos.append(Campo(6, 81, 'capital', bloco, 4))
+        self.campos.append(Campo(7, 85, 'filler', bloco, 30))
+
+
+class RegistrosN700_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(1, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(1, 6, 'mensagem', bloco, 80))
+        self.campos.append(Campo(1, 86, 'filler', bloco, 29))
+
+
+class RegistrosN705_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'tipoPessoa', bloco, 1))
+        self.campos.append(Campo(4, 7, 'docAdministrador', bloco, 14))
+        self.campos.append(Campo(5, 21, 'nome', bloco, 60))
+        self.campos.append(Campo(6, 81, 'cargo', bloco, 20))
+        self.campos.append(Campo(7, 85, 'filler', bloco, 14))
+
+
+class RegistrosN705_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'tipoReg', bloco, 2))
+        self.campos.append(Campo(3, 6, 'tipoReg', bloco, 80))
+        self.campos.append(Campo(4, 86, 'tipoReg', bloco, 29))
+
+
 class RegistrosT999(object):
 
     def __init__(self, bloco):
@@ -1336,10 +1428,3 @@ class RegistrosT999(object):
         self.campos.append(Campo(2, 4, 'codigo', bloco, 3))
         self.campos.append(Campo(3, 7, 'mensagem', bloco, 70))
         self.campos.append(Campo(4, 7, 'filler', bloco, 38))
-
-
-
-
-
-
-
