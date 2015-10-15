@@ -432,6 +432,318 @@ class RegistrosN270_subtipo99(object):
         self.campos.append(Campo(4, 46, 'filler', bloco, 69))
 
 
+class RegistrosN300_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 40))
+        self.campos.append(campoData(4, 46, 'dataAbertura', bloco, 8))
+        self.campos.append(Campo(5, 54, 'tipoPessoa', bloco, 1))
+        self.campos.append(Campo(6, 55, 'numDoc', bloco, 15))
+        self.campos.append(Campo(7, 70, 'nomeRazaoSocial', bloco, 40))
+        self.campos.append(Campo(8, 110, 'filler', bloco, 5))
+
+
+class RegistrosN300_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'tipoDoc', bloco, 1))
+        self.campos.append(Campo(4, 7, 'numDocIdentificacao', bloco, 15))
+        self.campos.append(Campo(5, 22, 'orgaoEmissor', bloco, 5))
+        self.campos.append(Campo(6, 27, 'ufDocIdentificacao', bloco, 2))
+        self.campos.append(campoData(7, 29, 'dataEmissaoDocumento', bloco, 8))
+        self.campos.append(Campo(8, 37, 'filler', bloco, 78))
+
+
+class RegistrosN300_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'banco', bloco, 3))
+        self.campos.append(Campo(4, 9, 'indicadorParticipacao', bloco, 1))
+        self.campos.append(Campo(5, 10, 'msgR300', bloco, 36))
+        self.campos.append(Campo(6, 46, 'filler', bloco, 69))
+
+
+class RegistrosN310_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'banco', bloco, 3))
+        self.campos.append(Campo(4, 9, 'agencia', bloco, 4))
+        self.campos.append(Campo(5, 13, 'conta', bloco, 10))
+        self.campos.append(Campo(6, 23, 'chequeInicial', bloco, 6))
+        self.campos.append(Campo(7, 29, 'chequeFinal', bloco, 6))
+        self.campos.append(Campo(8, 35, 'motivo', bloco, 12))
+        self.campos.append(campoData(9, 47, 'dataCadastramento', bloco, 8))
+        self.campos.append(Campo(10, 55, 'horaCadastramento', bloco, 4))
+        self.campos.append(Campo(11, 59, 'codFonte', bloco, 4))
+        self.campos.append(Campo(12, 63, 'filler', bloco, 52))
+
+
+class RegistrosN310_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR310', bloco, 40))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 69))
+
+
+class RegistrosN320_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'banco', bloco, 3))
+        self.campos.append(Campo(4, 9, 'agencia', bloco, 4))
+        self.campos.append(Campo(5, 13, 'conta', bloco, 10))
+        self.campos.append(Campo(6, 23, 'chequeInicial', bloco, 6))
+        self.campos.append(Campo(7, 29, 'chequeFinal', bloco, 6))
+        self.campos.append(Campo(8, 35, 'motivo', bloco, 12))
+        self.campos.append(campoData(9, 47, 'dataCadastro', bloco, 8))
+        self.campos.append(Campo(10, 55, 'codFonte', bloco, 4))
+        self.campos.append(Campo(11, 59, 'filler', bloco, 56))
+
+
+class RegistrosN320_subtipo90(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'totalOcorrencias', bloco, 5))
+        self.campos.append(campoData(4, 11, 'dataOcorAntiga', bloco, 8))
+        self.campos.append(campoData(5, 19, 'dataOcorRecente', bloco, 8))
+        self.campos.append(Campo(6, 27, 'filler', bloco, 88))
+
+
+class RegistrosN320_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR320', bloco, 40))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 69))
+
+
+class RegistrosN330_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'primeiraVerificacao', bloco, 1))
+        self.campos.append(Campo(4, 7, 'numCheque', bloco, 6))
+        self.campos.append(Campo(5, 13, 'qtdConsultasCheque', bloco, 3))
+        self.campos.append(campoData(6, 16, 'dataAntiga', bloco, 8))
+        self.campos.append(campoData(7, 24, 'dataRecente', bloco, 8))
+        self.campos.append(Campo(8, 32, 'nomeEmpresa', bloco, 20))
+        self.campos.append(Campo(9, 52, 'totalRegSegundaVerificacao', bloco, 3))
+        self.campos.append(Campo(10, 55, 'totalRegContaCorrente', bloco, 3))
+        self.campos.append(Campo(11, 58, 'filler', bloco, 57))
+
+
+class RegistrosN330_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'tipoDoc', bloco, 1))
+        self.campos.append(Campo(4, 7, 'numDoc', bloco, 15))
+        self.campos.append(Campo(5, 22, 'nomeRazao', bloco, 40))
+        self.campos.append(Campo(6, 62, 'qtdConsultas', bloco, 3))
+        self.campos.append(campoData(7, 65, 'dataOcorrenciaAntiga', bloco, 8))
+        self.campos.append(campoData(8, 73, 'dataOcorrenciaRecente', bloco, 8))
+        self.campos.append(Campo(9, 81, 'nomeEmpresaConsultante', bloco, 20))
+        self.campos.append(Campo(10, 101, 'filler', bloco, 14))
+
+
+class RegistrosN330_subtipo02(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'tipoDoc', bloco, 1))
+        self.campos.append(Campo(4, 7, 'numDoc', bloco, 15))
+        self.campos.append(Campo(5, 22, 'nomeRazao', bloco, 40))
+        self.campos.append(Campo(6, 62, 'qtdConsultas', bloco, 3))
+        self.campos.append(Campo(7, 65, 'numUltimoCheque', bloco, 6))
+        self.campos.append(campoData(8, 71, 'dataOcorrenciaAntiga', bloco, 8))
+        self.campos.append(campoData(9, 79, 'dataOcorrenciaRecente', bloco, 8))
+        self.campos.append(Campo(10, 87, 'filler', bloco, 28))
+
+
+class RegistrosN330_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR330', bloco, 40))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 69))
+
+
+class RegistrosN400_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'nomeAgencia', bloco, 70))
+        self.campos.append(Campo(4, 76, 'dataUltimaAtualizacao', bloco, 8))
+        self.campos.append(Campo(5, 84, 'dddFone', bloco, 4))
+        self.campos.append(Campo(6, 88, 'numFone', bloco, 8))
+        self.campos.append(Campo(7, 96, 'dddFax', bloco, 4))
+        self.campos.append(Campo(8, 100, 'numFax', bloco, 8))
+        self.campos.append(Campo(9, 108, 'filler', bloco, 7))
+
+
+class RegistrosN400_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'endAgencia', bloco, 70))
+        self.campos.append(Campo(4, 76, 'cidade', bloco, 30))
+        self.campos.append(Campo(5, 106, 'uf', bloco, 2))
+        self.campos.append(Campo(6, 108, 'filler', bloco, 7))
+
+
+class RegistrosN400_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR400', bloco, 40))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 69))
+
+
+class RegistrosN410_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'enderecoCep', bloco, 70))
+        self.campos.append(Campo(4, 76, 'bairro', bloco, 30))
+        self.campos.append(Campo(5, 106, 'filler', bloco, 9))
+
+
+class RegistrosN410_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'cidade', bloco, 30))
+        self.campos.append(Campo(4, 36, 'uf', bloco, 2))
+        self.campos.append(Campo(5, 38, 'cepGenerico', bloco, 1))
+        self.campos.append(Campo(6, 39, 'filler', bloco, 76))
+
+
+class RegistrosN410_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR410', bloco, 40))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 69))
+
+
+class RegistrosN420_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 4))
+        self.campos.append(Campo(3, 6, 'docConfere', bloco, 4))
+        self.campos.append(Campo(4, 7, 'nomeAssinante', bloco, 4))
+        self.campos.append(Campo(5, 77, 'tipoDocAssinante', bloco, 4))
+        self.campos.append(Campo(6, 78, 'classeAssinante', bloco, 4))
+        self.campos.append(campoData(7, 79, 'dataInstalacao', bloco, 4))
+        self.campos.append(Campo(8, 87, 'filler', bloco, 4))
+
+
+class RegistrosN420_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'logradouroAssinante', bloco, 70))
+        self.campos.append(Campo(4, 76, 'bairroAssinante', bloco, 30))
+        self.campos.append(Campo(5, 106, 'filler', bloco, 9))
+
+
+class RegistrosN420_subtipo02(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'cidadeAssinante', bloco, 30))
+        self.campos.append(Campo(4, 36, 'cepAssinante', bloco, 8))
+        self.campos.append(Campo(5, 44, 'filler', bloco, 71))
+
+
+class RegistrosN420_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'indicadorPesquisa', bloco, 1))
+        self.campos.append(Campo(4, 7, 'msgR420', bloco, 40))
+        self.campos.append(Campo(5, 47, 'filler', bloco, 68))
+
+
+class RegistrosN430_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'ddd1', bloco, 3))
+        self.campos.append(Campo(4, 9, 'fone1', bloco, 8))
+        self.campos.append(Campo(5, 17, 'ddd2', bloco, 3))
+        self.campos.append(Campo(6, 20, 'fone2', bloco, 8))
+        self.campos.append(Campo(7, 28, 'ddd3', bloco, 3))
+        self.campos.append(Campo(8, 31, 'fone3', bloco, 8))
+        self.campos.append(Campo(9, 39, 'ddd4', bloco, 3))
+        self.campos.append(Campo(10, 42, 'fone4', bloco, 8))
+        self.campos.append(Campo(11, 50, 'ddd5', bloco, 3))
+        self.campos.append(Campo(12, 53, 'fone5', bloco, 8))
+        self.campos.append(Campo(13, 61, 'filler', bloco, 54))
+
+
+class RegistrosN430_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR430', bloco, 40))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 69))
+
+
 class RegistrosN440_subtipo00(object):
 
     def __init__(self, bloco):
@@ -500,6 +812,520 @@ class RegistrosN440_subtipo99(object):
         self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
         self.campos.append(Campo(3, 6, 'msgR440', bloco, 40))
         self.campos.append(Campo(4, 46, 'filler', bloco, 69))
+
+
+class RegistrosN460_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(campoData(3, 6, 'dataOcorrencia', bloco, 8))
+        self.campos.append(Campo(4, 14, 'varaCivel', bloco, 4))
+        self.campos.append(Campo(5, 18, 'numDistribuidor', bloco, 4))
+        self.campos.append(Campo(6, 22, 'codNatureza', bloco, 3))
+        self.campos.append(campoDinheiro(7, 25, 'valorAcao', bloco, 15))
+        self.campos.append(Campo(8, 40, 'praca', bloco, 4))
+        self.campos.append(Campo(9, 44, 'uf', bloco, 2))
+        self.campos.append(Campo(10, 46, 'cidade', bloco, 30))
+        self.campos.append(Campo(11, 76, 'principal', bloco, 1))
+        self.campos.append(Campo(12, 77, 'subJudice', bloco, 1))
+        self.campos.append(Campo(13, 78, 'filial', bloco, 4))
+        self.campos.append(Campo(14, 82, 'digito', bloco, 2))
+        self.campos.append(campoData(15, 84, 'dataInclusaoAnotacao', bloco, 8))
+        self.campos.append(Campo(16, 92, 'horaInclusaoAnotacao', bloco, 6))
+        self.campos.append(Campo(17, 98, 'chaveCadus', bloco, 10))
+        self.campos.append(Campo(18, 108, 'filler', bloco, 7))
+
+
+class RegistrosN460_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'descNatureza', bloco, 30))
+        self.campos.append(Campo(4, 36, 'filler', bloco, 79))
+
+
+class RegistrosN460_subtipo02(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'praca', bloco, 4))
+        self.campos.append(Campo(4, 10, 'distribuidor', bloco, 2))
+        self.campos.append(Campo(5, 12, 'vara', bloco, 2))
+        self.campos.append(campoData(6, 14, 'data', bloco, 8))
+        self.campos.append(Campo(7, 22, 'processo', bloco, 16))
+        self.campos.append(Campo(8, 38, 'filler', bloco, 77))
+
+
+class RegistrosN460_subtipo90(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(campoData(3, 6, 'dataInicio', bloco, 8))
+        self.campos.append(campoData(4, 14, 'dataFinal', bloco, 8))
+        self.campos.append(Campo(5, 22, 'qtdTotal', bloco, 9))
+        self.campos.append(campoDinheiro(6, 31, 'valorTotal', bloco, 15))
+        self.campos.append(Campo(7, 46, 'filler', bloco, 69))
+
+
+class RegistrosN460_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR460', bloco, 70))
+        self.campos.append(Campo(4, 76, 'filler', bloco, 39))
+
+
+class RegistrosN470_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(campoData(3, 6, 'dataOcorrencia', bloco, 8))
+        self.campos.append(Campo(4, 14, 'natureza', bloco, 2))
+        self.campos.append(Campo(5, 16, 'vara', bloco, 4))
+        self.campos.append(Campo(6, 20, 'praca', bloco, 4))
+        self.campos.append(Campo(7, 24, 'uf', bloco, 2))
+        self.campos.append(Campo(8, 26, 'cidade', bloco, 30))
+        self.campos.append(Campo(9, 56, 'filial', bloco, 4))
+        self.campos.append(Campo(10, 60, 'digito', bloco, 2))
+        self.campos.append(campoData(11, 62, 'dataInclusao', bloco, 8))
+        self.campos.append(Campo(12, 70, 'horaInclusao', bloco, 6))
+        self.campos.append(Campo(13, 76, 'cadus', bloco, 10))
+        self.campos.append(Campo(14, 86, 'descricaoNatureza', bloco, 29))
+
+
+class RegistrosN470_subtipo90(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(campoData(3, 6, 'dataInicio', bloco, 8))
+        self.campos.append(campoData(4, 14, 'dataFinal', bloco, 8))
+        self.campos.append(Campo(5, 22, 'qtdTotal', bloco, 9))
+        self.campos.append(campoDinheiro(6, 31, 'valorTotal', bloco, 15))
+        self.campos.append(Campo(7, 46, 'filler', bloco, 69))
+
+
+class RegistrosN470_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR470', bloco, 70))
+        self.campos.append(Campo(4, 76, 'filler', bloco, 39))
+
+
+class RegistrosN480_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'dataOcorrencia', bloco, 8))
+        self.campos.append(Campo(4, 14, 'natureza', bloco, 2))
+        self.campos.append(Campo(5, 16, 'qualificacao', bloco, 3))
+        self.campos.append(Campo(6, 19, 'vara', bloco, 4))
+        self.campos.append(Campo(7, 23, 'cnpj', bloco, 9))
+        self.campos.append(Campo(8, 32, 'nomeEmpresa', bloco, 50))
+        self.campos.append(Campo(9, 82, 'filial', bloco, 4))
+        self.campos.append(Campo(10, 86, 'digito', bloco, 2))
+        self.campos.append(Campo(11, 88, 'dataInclusao', bloco, 8))
+        self.campos.append(Campo(12, 96, 'horaInclusao', bloco, 6))
+        self.campos.append(Campo(13, 102, 'cadus', bloco, 10))
+        self.campos.append(Campo(14, 112, 'filler', bloco, 3))
+
+
+class RegistrosN480_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'descNatureza', bloco, 30))
+        self.campos.append(Campo(4, 36, 'filler', bloco, 79))
+
+
+class RegistrosN480_subtipo90(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 4))
+        self.campos.append(campoData(3, 6, 'dataInicial', bloco, 4))
+        self.campos.append(campoData(4, 14, 'dataFinal', bloco, 4))
+        self.campos.append(Campo(5, 22, 'qtdTotal', bloco, 4))
+        self.campos.append(campoDinheiro(6, 31, 'valorTotal', bloco, 4))
+        self.campos.append(Campo(7, 46, 'filler', bloco, 4))
+
+
+class RegistrosN480_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR480', bloco, 70))
+        self.campos.append(Campo(4, 76, 'filler', bloco, 39))
+
+
+class RegistrosN500_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 4))
+        self.campos.append(Campo(3, 6, 'codScore', bloco, 4))
+        self.campos.append(Campo(4, 10, 'scoreCalculado', bloco, 4))
+        self.campos.append(Campo(5, 11, 'pontuacao', bloco, 4))
+        self.campos.append(Campo(6, 17, 'msgR500', bloco, 4))
+        self.campos.append(Campo(7, 87, 'delinRate', bloco, 4))
+        self.campos.append(Campo(8, 92, 'range', bloco, 4))
+        self.campos.append(Campo(9, 98, 'codMsg', bloco, 4))
+        self.campos.append(Campo(10, 104, 'filler', bloco, 4))
+
+
+class RegistrosN505_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'sequencia', bloco, 4))
+        self.campos.append(Campo(4, 10, 'mensagem', bloco, 100))
+        self.campos.append(Campo(5, 110, 'filler', bloco, 5))
+
+
+class RegistrosN505_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'codScore', bloco, 2))
+        self.campos.append(Campo(4, 8, 'mensagem', bloco, 100))
+        self.campos.append(Campo(5, 108, 'filler', bloco, 7))
+
+
+class RegistrosN505_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'codScore', bloco, 4))
+        self.campos.append(Campo(4, 10, 'mensagem', bloco, 100))
+        self.campos.append(Campo(5, 110, 'filler', bloco, 5))
+
+
+class RegistrosN600_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'indicativoValCli', bloco, 1))
+        self.campos.append(Campo(4, 7, 'valCliente', bloco, 15))
+        self.campos.append(Campo(5, 22, 'valCheque', bloco, 15))
+        self.campos.append(Campo(6, 37, 'indValorVista', bloco, 1))
+        self.campos.append(Campo(7, 38, 'valorVista', bloco, 15))
+        self.campos.append(Campo(8, 53, 'indValorPrazo', bloco, 1))
+        self.campos.append(Campo(9, 54, 'valorPrazo', bloco, 15))
+        self.campos.append(Campo(10, 69, 'indDataBloqueio', bloco, 1))
+        self.campos.append(Campo(11, 70, 'dataBloqueio', bloco, 8))
+        self.campos.append(Campo(12, 78, 'indLimiteIndividual', bloco, 1))
+        self.campos.append(Campo(13, 79, 'indDataVip', bloco, 1))
+        self.campos.append(Campo(14, 80, 'dataVip', bloco, 8))
+        self.campos.append(Campo(15, 88, 'indCheques', bloco, 1))
+        self.campos.append(Campo(16, 89, 'indFraude', bloco, 1))
+        self.campos.append(Campo(17, 90, 'filler', bloco, 25))
+
+
+class RegistrosN600_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'dataVencimento', bloco, 8))
+        self.campos.append(Campo(4, 14, 'indCheque', bloco, 1))
+        self.campos.append(Campo(5, 15, 'valorCheque', bloco, 15))
+        self.campos.append(Campo(6, 30, 'dataCompra', bloco, 8))
+        self.campos.append(Campo(7, 38, 'banco', bloco, 3))
+        self.campos.append(Campo(8, 41, 'numCheque', bloco, 6))
+        self.campos.append(Campo(9, 47, 'nomeCredor', bloco, 23))
+        self.campos.append(Campo(10, 70, 'loja', bloco, 4))
+        self.campos.append(Campo(11, 74, 'tipoDoc', bloco, 1))
+        self.campos.append(Campo(12, 75, 'numDoc', bloco, 15))
+        self.campos.append(Campo(13, 90, 'filler', bloco, 25))
+
+
+class RegistrosN600_subtipo02(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'indValores', bloco, 1))
+        self.campos.append(Campo(4, 7, 'mesano', bloco, 4))
+        self.campos.append(Campo(5, 11, 'indValorVencer', bloco, 1))
+        self.campos.append(campoDinheiro(6, 12, 'valorVencer', bloco, 15))
+        self.campos.append(Campo(7, 27, 'indValorSaldo', bloco, 1))
+        self.campos.append(campoDinheiro(8, 28, 'valorSaldo', bloco, 15))
+        self.campos.append(Campo(9, 43, 'indValorLimite', bloco, 1))
+        self.campos.append(campoDinheiro(10, 44, 'valorLimite', bloco, 15))
+        self.campos.append(Campo(11, 59, 'indValorExcedente', bloco, 1))
+        self.campos.append(campoDinheiro(12, 60, 'valorExcedente', bloco, 15))
+        self.campos.append(Campo(13, 75, 'filler', bloco, 40))
+
+
+class RegistrosN600_subtipo03(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 0, 'subtipo', bloco, 4))
+        self.campos.append(Campo(3, 0, 'indTotalVencer', bloco, 4))
+        self.campos.append(Campo(4, 0, 'totalVencer', bloco, 4))
+        self.campos.append(Campo(5, 0, 'indSaldoVencer', bloco, 4))
+        self.campos.append(Campo(6, 0, 'totalSaldoVencer', bloco, 4))
+        self.campos.append(Campo(7, 0, 'indExcedenteVencer', bloco, 4))
+        self.campos.append(Campo(8, 0, 'totalExcedenteVencer', bloco, 4))
+        self.campos.append(Campo(9, 0, 'filler', bloco, 4))
+
+
+class RegistrosN600_subtipo04(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'tipoReg', bloco, 2))
+        self.campos.append(Campo(3, 6, 'tipoReg', bloco, 1))
+        self.campos.append(Campo(4, 7, 'tipoReg', bloco, 15))
+        self.campos.append(Campo(5, 22, 'tipoReg', bloco, 1))
+        self.campos.append(Campo(6, 23, 'tipoReg', bloco, 15))
+        self.campos.append(Campo(7, 38, 'tipoReg', bloco, 1))
+        self.campos.append(Campo(8, 39, 'tipoReg', bloco, 15))
+        self.campos.append(Campo(9, 54, 'tipoReg', bloco, 61))
+
+
+class RegistrosN600_subtipo05(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'indTotalPrazo', bloco, 1))
+        self.campos.append(Campo(4, 7, 'totalPrazo', bloco, 15))
+        self.campos.append(Campo(5, 22, 'indSaldoPrazo', bloco, 1))
+        self.campos.append(Campo(6, 23, 'totalSaldoPrazo', bloco, 15))
+        self.campos.append(Campo(7, 38, 'indExcedentePrazo', bloco, 1))
+        self.campos.append(Campo(8, 39, 'totalExcedentePrazo', bloco, 15))
+        self.campos.append(Campo(9, 54, 'filler', bloco, 61))
+
+
+class RegistrosN610_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'codScore', bloco, 4))
+        self.campos.append(Campo(4, 10, 'pontuacao', bloco, 4))
+        self.campos.append(Campo(5, 14, 'inadimplencia', bloco, 7))
+        self.campos.append(Campo(6, 21, 'mensagem', bloco, 80))
+        self.campos.append(Campo(7, 101, 'filler', bloco, 14))
+
+
+class RegistrosN610_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 40))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 29))
+
+
+class RegistrosN620_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'valorLimite', bloco, 13))
+        self.campos.append(Campo(4, 19, 'filler', bloco, 96))
+
+
+class RegistrosN620_subtipo90(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 40))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 30))
+
+
+class RegistrosN620_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 40))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 30))
+
+
+class RegistrosN630_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'classe', bloco, 1))
+        self.campos.append(Campo(4, 7, 'pontuacao', bloco, 4))
+        self.campos.append(Campo(5, 11, 'mensagem', bloco, 80))
+        self.campos.append(Campo(6, 91, 'filler', bloco, 24))
+
+
+class RegistrosN630_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'msgR630', bloco, 40))
+        self.campos.append(Campo(4, 46, 'tipoReg', bloco, 29))
+
+
+class RegistrosN640_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'valor', bloco, 18))
+        self.campos.append(Campo(4, 24, 'filler', bloco, 90))
+
+
+class RegistrosN640_subtipo90(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 100))
+        self.campos.append(Campo(4, 106, 'filler', bloco, 8))
+
+
+class RegistrosN640_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 80))
+        self.campos.append(Campo(4, 46, 'filler', bloco, 29))
+
+
+class RegistrosN650_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'logradouro', bloco, 60))
+        self.campos.append(Campo(4, 66, 'numero', bloco, 6))
+        self.campos.append(Campo(5, 72, 'filler', bloco, 43))
+
+
+class RegistrosN650_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'complemento', bloco, 40))
+        self.campos.append(Campo(4, 66, 'bairro', bloco, 30))
+        self.campos.append(Campo(5, 96, 'filler', bloco, 39))
+
+
+class RegistrosN650_subtipo02(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'municipio', bloco, 30))
+        self.campos.append(Campo(4, 36, 'cep', bloco, 8))
+        self.campos.append(Campo(5, 44, 'uf', bloco, 2))
+        self.campos.append(Campo(6, 48, 'ddd', bloco, 4))
+        self.campos.append(Campo(7, 52, 'telefone', bloco, 9))
+        self.campos.append(Campo(8, 61, 'filler', bloco, 56))
+
+
+class RegistrosN650_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 4))
+        self.campos.append(Campo(3, 6, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(4, 86, 'tipoReg', bloco, 4))
+
+
+class RegistrosN660_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'renda', bloco, 9))
+        self.campos.append(Campo(4, 15, 'mensagem', bloco, 80))
+        self.campos.append(Campo(5, 95, 'filler', bloco, 20))
+
+
+class RegistrosN660_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 80))
+        self.campos.append(Campo(4, 86, 'filler', bloco, 29))
+
+
+class RegistrosN670_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'data', bloco, 8))
+        self.campos.append(Campo(4, 14, 'filler', bloco, 101))
+
+
+class RegistrosN670_subtipo99(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'mensagem', bloco, 80))
+        self.campos.append(Campo(4, 86, 'filler', bloco, 29))
 
 
 class RegistrosT999(object):
