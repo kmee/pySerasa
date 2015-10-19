@@ -43,9 +43,9 @@ class ParserStringDados(object):
         stringDadosRetorno = stringDadosRetorno[0:len(stringDadosRetorno)-2] + 'T999'
         vetorStringDados = re.findall("([B,P,N,T]\d{2}.*?)(?=[B,P,N,T]\d{3})", stringDadosRetorno)
 
-        arquivo = self.montarObjetoCrednet(vetorStringDados, arquivo)
+        arquivoCrednet = self.montarObjetoCrednet(vetorStringDados, arquivo)
 
-        return arquivo
+        return arquivoCrednet
 
     def montarObjetoCrednet(self, vetorStringDados, arquivo):
 

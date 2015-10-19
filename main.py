@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from parserStringDados import ParserStringDados
 from crednet import Crednet
 
@@ -12,7 +11,6 @@ documentoConsultado = '000000667541195'
 tipoPessoaBusca = 'F'
 
 documentoConsultor = '08053031000201'
-
 
 # Objeto que gerencia todas as funções de parsing
 parser = ParserStringDados()
@@ -28,12 +26,16 @@ arquivo = Crednet()
 arquivo = parser.parserStringDadosRetorno(stringDados, arquivo)
 
 
+
 # arquivo.pendenciasInternas
 # arquivo.pendenciasFinanceiras
 # arquivo.protestosEstados
 # arquivo.chequesSemFundos
 # print arquivo.B49C.protocolo
 
+
 arquivo.getString()
 
+
 # teste = arquivo.getBlocoDeRegistros('pendenciasFinanceiras')
+
