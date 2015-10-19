@@ -238,15 +238,7 @@ class blocoN270_subtipo99(Bloco):
         self.campos = RegistrosN270_subtipo99(bloco)
 
 
-class blocoN440_subtipo00(Bloco):
-
-    def __init__(self, nome, bloco):
-        self.nome_bloco = "Registro de Consultas"
-        self.nome = nome
-        self.campos = RegistrosN440_subtipo00(bloco)
-
-
-class bloco300_subtipo00(Bloco):
+class blocoN300_subtipo00(Bloco):
 
     def __init__(self, nome, bloco):
         self.nome_bloco = "Recheque Online"
@@ -291,7 +283,7 @@ class blocoN320_subtipo00(Bloco):
     def __init__(self, nome, bloco):
         self.nome_bloco = u"Contumácia"
         self.nome = nome
-        self.campos = RegistrosN440_subtipo00(bloco)
+        self.campos = RegistrosN320_subtipo00(bloco)
 
 
 class blocoN320_subtipo90(Bloco):
@@ -299,7 +291,7 @@ class blocoN320_subtipo90(Bloco):
     def __init__(self, nome, bloco):
         self.nome_bloco = u"Contumácia"
         self.nome = nome
-        self.campos = RegistrosN440_subtipo00(bloco)
+        self.campos = RegistrosN320_subtipo90(bloco)
 
 
 class blocoN320_subtipo99(Bloco):
@@ -307,7 +299,7 @@ class blocoN320_subtipo99(Bloco):
     def __init__(self, nome, bloco):
         self.nome_bloco = u"Contumácia"
         self.nome = nome
-        self.campos = RegistrosN440_subtipo00(bloco)
+        self.campos = RegistrosN320_subtipo99(bloco)
 
 
 class blocoN330_subtipo00(Bloco):
@@ -350,7 +342,7 @@ class blocoN400_subtipo00(Bloco):
         self.campos = RegistrosN400_subtipo00(bloco)
 
 
-class blocoN440_subtipo01(Bloco):
+class blocoN400_subtipo01(Bloco):
 
     def __init__(self, nome, bloco):
         self.nome_bloco = u"Endereço de Agência Bancária"
@@ -436,6 +428,13 @@ class blocoN430_subtipo99(Bloco):
         self.nome_bloco = u"Últimos telefones consultados"
         self.nome = nome
         self.campos = RegistrosN430_subtipo99(bloco)
+
+class blocoN440_subtipo00(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Registro de Consultas"
+        self.nome = nome
+        self.campos = RegistrosN440_subtipo00(bloco)
 
 
 class blocoN440_subtipo01(Bloco):
@@ -558,18 +557,10 @@ class blocoN480_subtipo90(Bloco):
         self.campos = RegistrosN480_subtipo90(bloco)
 
 
-class blocoN480_subtipo00(Bloco):
-
-    def __init__(self, nome, bloco):
-        self.nome_bloco = u"Participação em Insucesso Empresarial"
-        self.nome = nome
-        self.campos = RegistrosN480_subtipo99(bloco)
-
-
 class blocoN480_subtipo99(Bloco):
 
     def __init__(self, nome, bloco):
-        self.nome_bloco = "Registro de Consultas"
+        self.nome_bloco = u"Participação em Insucesso Empresarial"
         self.nome = nome
         self.campos = RegistrosN480_subtipo99(bloco)
 
@@ -668,14 +659,6 @@ class blocoN610_subtipo99(Bloco):
         self.nome_bloco = "Concentre Scoring PJ"
         self.nome = nome
         self.campos = RegistrosN610_subtipo99(bloco)
-
-
-class blocoN480_subtipo99(Bloco):
-
-    def __init__(self, nome, bloco):
-        self.nome_bloco = "Registro de Consultas"
-        self.nome = nome
-        self.campos = RegistrosN480_subtipo99(bloco)
 
 
 class blocoN620_subtipo00(Bloco):

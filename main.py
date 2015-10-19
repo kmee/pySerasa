@@ -34,8 +34,6 @@ arquivo = parser.parserStringDadosRetorno(stringDados, arquivo)
 # arquivo.chequesSemFundos
 # print arquivo.B49C.protocolo
 
-#arquivo.getString()
+arquivo.getString()
 
-teste = arquivo.getBlocoDeRegistros('B49C')
-
-print teste
+# teste = arquivo.getBlocoDeRegistros('pendenciasFinanceiras')
