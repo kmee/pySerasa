@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from parserStringDados import ParserStringDados
-from crednet import Crednet
+from pyserasa.parserStringDados import ParserStringDados
+from pyserasa.crednet import Crednet
 
 logon = '32629955'
 
