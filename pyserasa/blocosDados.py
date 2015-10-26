@@ -4,30 +4,30 @@ from bloco import Bloco
 
 
 class pendenciasInternas(Bloco):
-    blocos = []
 
     def __init__(self):
+        blocos = []
         self.nome = "pendenciasInternas"
 
 
 class pendenciasFinanceiras(Bloco):
-    blocos = []
 
     def __init__(self):
+        blocos = []
         self.nome = "pendenciasFinanceiras"
 
 
 class protestosEstados(Bloco):
-    blocos = []
 
     def __init__(self):
+        blocos = []
         self.nome = "protestosEstados"
 
 
 class chequesSemFundos(Bloco):
-    blocos = []
 
     def __init__(self):
+        blocos = []
         self.nome = "chequesSemFundos"
 
 
