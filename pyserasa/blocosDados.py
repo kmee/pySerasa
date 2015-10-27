@@ -6,28 +6,28 @@ from bloco import Bloco
 class pendenciasInternas(Bloco):
 
     def __init__(self):
-        blocos = []
+        self.blocos = []
         self.nome = "pendenciasInternas"
 
 
 class pendenciasFinanceiras(Bloco):
 
     def __init__(self):
-        blocos = []
+        self.blocos = []
         self.nome = "pendenciasFinanceiras"
 
 
 class protestosEstados(Bloco):
 
     def __init__(self):
-        blocos = []
+        self.blocos = []
         self.nome = "protestosEstados"
 
 
 class chequesSemFundos(Bloco):
 
     def __init__(self):
-        blocos = []
+        self.blocos = []
         self.nome = "chequesSemFundos"
 
 
