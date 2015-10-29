@@ -77,8 +77,8 @@ class Crednet(object):
                             string_retorno += campos._nome + ": " + str(
                                 campos._valor) + "\n"
                 elif bloco.nome == 'protestosEstados':
-                    string_retorno += "Protestos dos Estados\n" + "----------------------" \
-                                       "-------------------------------------\n"
+                    string_retorno += "Protestos dos Estados\n" + "---------" \
+                          "--------------------------------------------------\n"
                     for registro in bloco.blocos:
                         for campos in registro.campos.campos:
                             string_retorno += campos._nome + ": " + str(
@@ -91,8 +91,8 @@ class Crednet(object):
                             string_retorno += campos._nome + ": " + str(
                                 campos._valor) + "\n"
                 else:
-                    string_retorno += bloco.nome_bloco + "-------------------------------" \
-                                                "----------------------------\n"
+                    string_retorno += bloco.nome_bloco + "-------------------" \
+                                    "----------------------------------------\n"
                     for campo in bloco.campos.campos:
                         string_retorno += campo._nome + ": " + str(
                             campo._valor) + "\n"
