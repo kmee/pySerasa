@@ -11,7 +11,7 @@ class ParserStringDados(object):
         return dados
 
     def realizarBuscaSerasa(self, dados):
-        request = requests.get(dados)
+        request = requests.get(dados, verify=False)
 
         return request.text
 
