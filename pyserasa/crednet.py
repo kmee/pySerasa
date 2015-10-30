@@ -138,7 +138,7 @@ class Crednet(object):
                     string_retorno += "\n"
         return string_retorno
 
-    def getBlocoDeRegistros(self, nome):
+    def get_bloco_de_registros(self, nome):
 
         for bloco in self.blocos:
             if bloco.nome == nome:
