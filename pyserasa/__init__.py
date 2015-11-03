@@ -1,1 +1,1 @@
-__author__ = 'luiz_divino'
+from . import crednet, parserStringDados
