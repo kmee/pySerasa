@@ -397,7 +397,7 @@ class RegistrosN270_subtipo00(object):
         self.campos.append(Campo(4, 14, 'cheque', bloco, 10))
         self.campos.append(Campo(5, 24, 'alinea', bloco, 5))
         self.campos.append(Campo(6, 29, 'quantidade', bloco, 5))
-        self.campos.append(campoDinheiro(7, 34, 'valor', bloco, 15))
+        self.campos.append(Campo(7, 34, 'valor', bloco, 15))
         self.campos.append(Campo(8, 49, 'numBanco', bloco, 3))
         self.campos.append(Campo(9, 52, 'nomeBanco', bloco, 14))
         self.campos.append(Campo(10, 66, 'agencia', bloco, 4))
