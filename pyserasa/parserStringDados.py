@@ -6,9 +6,11 @@ import requests
 class ParserStringDados(object):
 
     def gerar_string_envio(self, documento_consultado,
-                           tipo_pessoa_busca, documento_consultor):
-        dados = 'https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=31' \
-                '56396710203040        B49C      ' + documento_consultado + \
+                           tipo_pessoa_busca, documento_consultor,
+                           login, senha):
+        
+        dados = 'https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=' \
+                + login + senha + '        B49C      ' + documento_consultado +\
                 tipo_pessoa_busca + 'C     FI0001000000000000000N99SINIAN    ' \
                                     '                          D             ' \
                                     'N                                       ' \
