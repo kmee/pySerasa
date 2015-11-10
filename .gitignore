@@ -3,6 +3,7 @@
 
 # Distribution / packaging
 .Python
+examples/
 env/
 build/
 develop-eggs/
