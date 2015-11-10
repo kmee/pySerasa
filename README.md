@@ -1,4 +1,5 @@
-#KMEE Módulo pySerasa - Serasa Crednet
+<img src="https://www.kmee.com.br/wp-content/uploads/2014/09/kmee_logo_kde_1.png" width="95" height="29">
+# KMEE Módulo pySerasa - Serasa Crednet
 
 [![Build Status](https://travis-ci.org/kmee/pySerasa.svg?branch=mileo-patch-1)](https://travis-ci.org/kmee/pySerasa)
 
