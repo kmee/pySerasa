@@ -9,7 +9,7 @@ class ParserStringDados(object):
                            tipo_pessoa_busca, documento_consultor,
                            login, senha):
         
-        dados = 'https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=' \
+        dados = 'https://sitenet43.serasa.com.br/Prod/consultahttps?p=' \
                 + login + senha + '        B49C      ' + documento_consultado +\
                 tipo_pessoa_busca + 'C     FI0001000000000000000N99SINIAN    ' \
                                     '                          D             ' \
@@ -64,7 +64,7 @@ class ParserStringDados(object):
         string_dados_retorno = string_dados_retorno[
                                0:len(string_dados_retorno)-2] + 'T999'
         vetor_string_dados = re.findall(
-            "([B,P,N,T]\d{2}.*?)(?=[B,P,N,T]\d{3})", string_dados_retorno)
+            "([B,P,N]\d{2}.*?)(?=[B,P,N]\d{3}|T999)", string_dados_retorno)
 
         arquivo_crednet = self.montar_objeto_crednet(
             vetor_string_dados, arquivo)
