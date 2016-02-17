@@ -6,7 +6,7 @@ import requests
 class ParserStringDados(object):
 
     def gerar_string_envio(self, documento_consultado,
-                           tipo_pessoa_busca, documento_consultor,
+                           tipo_pessoa_busca, documento_consultor, uf_cliente,
                            login, senha):
         
         dados = 'https://sitenet43.serasa.com.br/Prod/consultahttps?p=' \
@@ -27,7 +27,10 @@ class ParserStringDados(object):
                                         '                          N00100PPX2' \
                                         '1P 0                                ' \
                                         '                                    ' \
-                                        '                                 T999'
+                                        '                                 ' \
+                                        'N00300                     ' \
+                + uf_cliente + '                                             ' \
+                               '                                         T999'
 
         return dados
 
