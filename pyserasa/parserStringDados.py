@@ -67,7 +67,7 @@ class ParserStringDados(object):
         string_dados_retorno = string_dados_retorno[
                                0:len(string_dados_retorno)-2] + 'T999'
         vetor_string_dados = re.findall(
-            "([B,P,N]\d{2}.*?)(?=[B,P,N]\d{3}|T999)", string_dados_retorno)
+            "([B,P,N]\d{2}.*?)(?=[B,P,N][1-9][0-9][0-9]|T999)", string_dados_retorno)
 
         arquivo_crednet = self.montar_objeto_crednet(
             vetor_string_dados, arquivo)
