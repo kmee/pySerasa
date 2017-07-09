@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 from codecs import open
 from os import path
@@ -22,8 +23,8 @@ setup(
     version=__version__,
     description='Interação com SERASA:  aná Analise e informacoes para decisoes de credito e apoio a negocios',
     long_description=long_description,
-    url='https://github.com/mileo/serasa',
-    download_url='https://github.com/mileo/serasa/tarball/' + __version__,
+    url='https://github.com/kmee/serasa',
+    download_url='https://github.com/kmee/serasa/tarball/' + __version__,
     license='BSD',
     classifiers=[
       'Development Status :: 3 - Alpha',
@@ -33,8 +34,8 @@ setup(
     keywords='',
     packages=find_packages(exclude=['docs', 'tests*']),
     include_package_data=True,
-    author='Luis Felipe Mileo',
+    author='KMEE INFORMATICA LTDA',
     install_requires=install_requires,
     dependency_links=dependency_links,
-    author_email='mileo@kmee.com.br'
+    author_email='dev@kmee.com.br'
 )
