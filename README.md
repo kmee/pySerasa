@@ -17,6 +17,11 @@ Algumas das consultas que podem ser realizadas a partir deste módulo:
 
 Para utilizar o módulo, é necessário que você possua Login e Senha.
 
+Contribuidores.
+---
+- KMEE
+- [Luiz Felipe do Divino](https://github.com/lfdivino)
+
 Suporte especializado.
 ---
 
