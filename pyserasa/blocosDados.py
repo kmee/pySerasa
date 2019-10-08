@@ -7,6 +7,7 @@ class pendenciasInternas(Bloco):
 
     def __init__(self):
         self.blocos = []
+        self.nome_bloco = False
         self.nome = "pendenciasInternas"
 
 
@@ -14,6 +15,7 @@ class pendenciasFinanceiras(Bloco):
 
     def __init__(self):
         self.blocos = []
+        self.nome_bloco = False
         self.nome = "pendenciasFinanceiras"
 
 
@@ -21,6 +23,7 @@ class protestosEstados(Bloco):
 
     def __init__(self):
         self.blocos = []
+        self.nome_bloco = False
         self.nome = "protestosEstados"
 
 
@@ -28,6 +31,7 @@ class chequesSemFundos(Bloco):
 
     def __init__(self):
         self.blocos = []
+        self.nome_bloco = False
         self.nome = "chequesSemFundos"
 
 
@@ -851,6 +855,78 @@ class blocoN705_subtipo99(Bloco):
         self.nome_bloco = "Administradores"
         self.nome = nome
         self.campos = RegistrosN705_subtipo99(bloco)
+
+
+class blocoI001_subtipo00(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Registro de Pedido"
+        self.nome = nome
+        self.campos = RegistrosI001_subtipo00(bloco)
+
+
+class blocoI105(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Grafias"
+        self.nome = nome
+        self.campos = RegistrosI001_subtipo00(bloco)
+
+
+class blocoI110_subtipo00(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Resumo de Protestos"
+        self.nome = nome
+        self.campos = RegistrosI001_subtipo00(bloco)
+
+
+class blocoI110_subtipo01(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Detalhe de Protestos"
+        self.nome = nome
+        self.campos = RegistrosI110_subtipo01(bloco)
+
+
+class blocoI220_subtipo00(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Resumo de PEFIN"
+        self.nome = nome
+        self.campos = RegistrosI220_subtipo00(bloco)
+
+
+class blocoI220_subtipo01(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Detalhe de PEFIN"
+        self.nome = nome
+        self.campos = RegistrosI220_subtipo01(bloco)
+
+
+class blocoI220_subtipo02(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Detalhe de PEFIN 02"
+        self.nome = nome
+        self.campos = RegistrosI220_subtipo02(bloco)
+
+
+class blocoI220_subtipo03(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Detalhe de PEFIN - Credor"
+        self.nome = nome
+        self.campos = RegistrosI220_subtipo03(bloco)
+
+
+class blocoA900(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Mensagens Informativas"
+        self.nome = nome
+        self.campos = RegistrosA900(bloco)
 
 
 class blocoT999(Bloco):
