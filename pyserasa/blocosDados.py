@@ -35,6 +35,22 @@ class chequesSemFundos(Bloco):
         self.nome = "chequesSemFundos"
 
 
+class covemDevedores(Bloco):
+
+    def __init__(self):
+        self.blocos = []
+        self.nome_bloco = False
+        self.nome = "covemDevedores"
+
+
+class grafias(Bloco):
+
+    def __init__(self):
+        self.blocos = []
+        self.nome_bloco = False
+        self.nome = "grafias"
+
+
 class blocoB49C(Bloco):
 
     def __init__(self, nome, bloco):
@@ -870,7 +886,7 @@ class blocoI105(Bloco):
     def __init__(self, nome, bloco):
         self.nome_bloco = "Grafias"
         self.nome = nome
-        self.campos = RegistrosI001_subtipo00(bloco)
+        self.campos = RegistrosI105(bloco)
 
 
 class blocoI110_subtipo00(Bloco):
@@ -878,7 +894,7 @@ class blocoI110_subtipo00(Bloco):
     def __init__(self, nome, bloco):
         self.nome_bloco = "Resumo de Protestos"
         self.nome = nome
-        self.campos = RegistrosI001_subtipo00(bloco)
+        self.campos = RegistrosI110_subtipo00(bloco)
 
 
 class blocoI110_subtipo01(Bloco):
@@ -887,6 +903,29 @@ class blocoI110_subtipo01(Bloco):
         self.nome_bloco = "Detalhe de Protestos"
         self.nome = nome
         self.campos = RegistrosI110_subtipo01(bloco)
+
+class blocoI230_subtipo00(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Resumo de CONVEM DEVEDORES"
+        self.nome = nome
+        self.campos = RegistrosI230_subtipo00(bloco)
+
+
+class blocoI230_subtipo01(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Detalhe de CONVEM DEVEDORES"
+        self.nome = nome
+        self.campos = RegistrosI230_subtipo01(bloco)
+
+
+class blocoI230_subtipo02(Bloco):
+
+    def __init__(self, nome, bloco):
+        self.nome_bloco = "Detalhe de CONVEM DEVEDORES 02"
+        self.nome = nome
+        self.campos = RegistrosI230_subtipo02(bloco)
 
 
 class blocoI220_subtipo00(Bloco):

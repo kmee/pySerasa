@@ -1572,6 +1572,49 @@ class RegistrosI220_subtipo03(object):
         self.campos.append(Campo(8, 108, 'filler_2', bloco, 1))
 
 
+class RegistrosI230_subtipo00(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'data_inicial', bloco, 8))
+        self.campos.append(Campo(4, 14, 'data_final', bloco, 8))
+        self.campos.append(Campo(5, 22, 'qtd_total', bloco, 9))
+        self.campos.append(Campo(6, 31, 'valor', bloco, 15))
+        self.campos.append(Campo(7, 46, 'origem', bloco, 16))
+        self.campos.append(Campo(8, 62, 'filler', bloco, 53))
+
+
+class RegistrosI230_subtipo01(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'data_ocorrencia', bloco, 8))
+        self.campos.append(Campo(4, 14, 'natureza', bloco, 3))
+        self.campos.append(Campo(5, 17, 'valor', bloco, 15))
+        self.campos.append(Campo(6, 32, 'praca', bloco, 4))
+        self.campos.append(Campo(7, 36, 'uf', bloco, 2))
+        self.campos.append(Campo(8, 38, 'nome_instituicao', bloco, 30))
+        self.campos.append(Campo(9, 68, 'contrato', bloco, 16))
+        self.campos.append(Campo(10, 84, 'cnpj_credor', bloco, 9))
+        self.campos.append(Campo(11, 93, 'chv_cadus', bloco, 10))
+        self.campos.append(Campo(12, 104, 'serie_cadus', bloco, 1))
+        self.campos.append(Campo(13, 105, 'filler', bloco, 11))
+
+
+class RegistrosI230_subtipo02(object):
+
+    def __init__(self, bloco):
+        self.campos = []
+        self.campos.append(Campo(1, 0, 'tipoReg', bloco, 4))
+        self.campos.append(Campo(2, 4, 'subtipo', bloco, 2))
+        self.campos.append(Campo(3, 6, 'descricao_natureza', bloco, 30))
+        self.campos.append(Campo(4, 36, 'filler', bloco, 79))
+
+
 class RegistrosA900(object):
 
     def __init__(self, bloco):
