@@ -53,12 +53,16 @@ class ParserStringDados(object):
 
         if nome == 'N230':
             arquivo.blocos[0].blocos.append(bloco_montado)
-        elif nome == 'N240':
+        elif nome in ['N240', 'I220']:
             arquivo.blocos[1].blocos.append(bloco_montado)
-        elif nome == 'N250':
+        elif nome in ['N250', 'I110']:
             arquivo.blocos[2].blocos.append(bloco_montado)
         elif nome == 'N270':
             arquivo.blocos[3].blocos.append(bloco_montado)
+        elif nome == 'I230':
+            arquivo.blocos[4].blocos.append(bloco_montado)
+        elif nome == 'I105':
+            arquivo.blocos[5].blocos.append(bloco_montado)
         else:
             arquivo.blocos.append(bloco_montado)
 
