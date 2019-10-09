@@ -4,6 +4,8 @@ from blocosDados import pendenciasInternas
 from blocosDados import pendenciasFinanceiras
 from blocosDados import protestosEstados
 from blocosDados import chequesSemFundos
+from blocosDados import covemDevedores
+from blocosDados import grafias
 
 
 class Crednet(object):
@@ -13,6 +15,8 @@ class Crednet(object):
         self.blocos.append(pendenciasFinanceiras())
         self.blocos.append(protestosEstados())
         self.blocos.append(chequesSemFundos())
+        self.blocos.append(covemDevedores())
+        self.blocos.append(grafias())
 
     def __getattr__(self, name):
         bloco = ([c for c in self.blocos if c.nome == name] or [None])[0]
